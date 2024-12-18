@@ -1,59 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Designers Guide Book</title>
     <style>
-        html, body {
-            width: 100%;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #000;
-        }
+      html,
+      body {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
 
-        iframe {
-            width: 100%;
-            height: 100vh;
-            border: none; /* Optional: removes the iframe border */
-            display: none; /* Initially hide both iframes */
-        }
+      iframe {
+        width: 100%;
+        height: 100vh;
+        border: none; /* Optional: removes the iframe border */
+        display: none; /* Initially hide both iframes */
+      }
 
-        .desktop {
-            display: none;
-           
-        }
+      .desktop {
+        display: none;
+      }
 
-        .mobile {
-            display: none;
+      .mobile {
+        display: none;
+
+        box-sizing: border-box; /* Ensures padding doesn't affect width/height */
+      }
+
+      .logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 2rem 4%;
+        max-width: 10rem;
+        transition: all 0.3s ease-in-out;
+      }
+
+      @media (max-width: 768px) {
+        .logo {
+          max-width: 6rem; /* Change the width as needed */
         }
+      }
+
+      .logo:hover {
+        opacity: 0.7;
+      }
+
+      .logo svg {
+        width: 100%;
+        height: auto;
+      }
     </style>
-</head>
-<body>
-    <iframe class="desktop" src="https://my.spline.design/designersguidebookpcimage-52a4b0614a266b53a674f06b06d59b0b/"></iframe>
-    <iframe class="mobile" src="https://my.spline.design/designersguidebookpcimagecopy-1384bb4c394224dbdd8639b009654949/"></iframe>
+  </head>
+  <body>
+    <div class="logo">
+      <a target="_blank" href="https://www.studiomesmer.com/">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="158.875"
+          height="71.889"
+          viewBox="0 0 158.875 71.889"
+        >
+          <path
+            id="Path_2777"
+            data-name="Path 2777"
+            d="M9.758-21.566c-3.895,0-7.667,2.132-7.667,6.232,0,2.911,1.722,5.125,5.863,6.273l2.337.7c1.968.574,2.419,1.476,2.419,2.173,0,1.148-1.107,2.009-3.116,2.009A4.644,4.644,0,0,1,5.7-6.068,2.769,2.769,0,0,0,3.485-7.38a1.969,1.969,0,0,0-2.05,2.05A4.468,4.468,0,0,0,2.542-2.747,8.773,8.773,0,0,0,9.594.205c4.264,0,8.446-2.173,8.446-6.683,0-3.649-2.747-5.207-6.027-6.109l-2.5-.738c-1.886-.533-2.132-1.394-2.132-2.05,0-1.148.943-1.927,2.542-1.927a3.705,3.705,0,0,1,2.952,1.394,2.783,2.783,0,0,0,2.255,1.148,1.915,1.915,0,0,0,2.091-2.009,3.087,3.087,0,0,0-.656-1.8A8.407,8.407,0,0,0,9.758-21.566ZM30.668-4.592c-.451,0-1.107.164-1.558.164-.9,0-1.312-.615-1.312-1.8V-17.1H30.5a2,2,0,0,0,2.173-2.091A2.013,2.013,0,0,0,30.5-21.32H27.8v-2.788a2.7,2.7,0,0,0-2.665-2.706,2.73,2.73,0,0,0-2.706,2.706v2.788H21.238a2.034,2.034,0,0,0-2.173,2.132A2.024,2.024,0,0,0,21.238-17.1h1.189V-6.4c0,5.7,2.829,6.6,5.617,6.6s4.633-.984,4.633-2.87A1.756,1.756,0,0,0,30.668-4.592ZM43.337.287c4.428,0,6.847-3.362,7.011-4.838V-2.5A2.722,2.722,0,0,0,53.013.205,2.73,2.73,0,0,0,55.719-2.5V-18.778a2.7,2.7,0,0,0-2.706-2.665,2.686,2.686,0,0,0-2.665,2.665V-8.9c-.164,1.148-1.394,4.592-5.084,4.592-2.419,0-4.346-1.517-4.346-5.207v-9.266a2.686,2.686,0,0,0-2.665-2.665,2.7,2.7,0,0,0-2.706,2.665v9.266C35.547-2.419,39.2.287,43.337.287ZM77.695-29.274a2.714,2.714,0,0,0-2.665,2.665v7.38a1.682,1.682,0,0,0-.041.451v.7a6.484,6.484,0,0,0-6.068-3.485C64.452-21.566,59-17.958,59-10.66,59-3.2,64.411.287,68.921.287c3.567,0,5.74-2.214,6.068-3.485v.779A2.7,2.7,0,0,0,77.695.246a2.758,2.758,0,0,0,2.747-2.665v-24.19A2.758,2.758,0,0,0,77.695-29.274ZM69.9-4.346c-2.706,0-5.535-2.091-5.535-6.314,0-4.182,2.829-6.314,5.535-6.314,2.3,0,5.33,1.681,5.33,6.314S72.2-4.346,69.9-4.346ZM87.289-24.354A2.75,2.75,0,0,0,90-27.019a2.75,2.75,0,0,0-2.706-2.665,2.758,2.758,0,0,0-2.747,2.665A2.758,2.758,0,0,0,87.289-24.354Zm0,2.911a2.73,2.73,0,0,0-2.706,2.706V-2.5A2.739,2.739,0,0,0,87.289.246,2.731,2.731,0,0,0,89.954-2.5V-18.737A2.722,2.722,0,0,0,87.289-21.443Zm16.933-.123A10.946,10.946,0,0,0,93.275-10.619C93.275-3.28,99.507.287,104.222.287c4.674,0,10.947-3.567,10.947-10.906C115.169-17.917,108.9-21.566,104.222-21.566Zm0,4.674c2.87,0,5.617,2.3,5.617,6.273,0,3.936-2.747,6.232-5.617,6.232-2.911,0-5.617-2.3-5.617-6.232C98.605-14.6,101.311-16.892,104.222-16.892ZM29.643,20.475A8.406,8.406,0,0,0,21.935,25.6a7.063,7.063,0,0,0-7.093-5.125c-4.428,0-6.847,3.362-7.011,4.838v-2.05a2.722,2.722,0,0,0-2.665-2.706A2.73,2.73,0,0,0,2.46,23.263V39.54a2.686,2.686,0,0,0,5.371,0V29.659c.164-1.148,1.394-4.592,5.084-4.592,2.419,0,4.346,1.517,4.346,5.207V39.54a2.686,2.686,0,0,0,5.371,0V29.659c.123-1.148,1.394-4.592,5.084-4.592,2.419,0,4.346,1.517,4.346,5.207V39.54a2.686,2.686,0,0,0,5.371,0V30.274C37.433,23.181,33.784,20.475,29.643,20.475ZM51.5,20.434A10.784,10.784,0,0,0,40.713,31.381c0,7.462,5.781,10.824,11.234,10.824a10.523,10.523,0,0,0,6.15-1.763,2.941,2.941,0,0,0,1.312-2.255,1.764,1.764,0,0,0-1.845-1.845A5.022,5.022,0,0,0,55.555,37a7.222,7.222,0,0,1-3.4.861c-2.993,0-5.371-1.6-5.863-4.592l12.177.082c2.173,0,3.362-.738,3.362-2.87C61.828,24.124,56.17,20.434,51.5,20.434Zm0,4.674a4.824,4.824,0,0,1,5.043,4.469H46.289A4.946,4.946,0,0,1,51.5,25.108ZM72,20.434c-3.895,0-7.667,2.132-7.667,6.232,0,2.911,1.722,5.125,5.863,6.273l2.337.7c1.968.574,2.419,1.476,2.419,2.173,0,1.148-1.107,2.009-3.116,2.009a4.644,4.644,0,0,1-3.895-1.886,2.769,2.769,0,0,0-2.214-1.312,1.969,1.969,0,0,0-2.05,2.05,4.468,4.468,0,0,0,1.107,2.583,8.773,8.773,0,0,0,7.052,2.952c4.264,0,8.446-2.173,8.446-6.683,0-3.649-2.747-5.207-6.027-6.109l-2.5-.738c-1.886-.533-2.132-1.394-2.132-2.05,0-1.148.943-1.927,2.542-1.927a3.705,3.705,0,0,1,2.952,1.394,2.783,2.783,0,0,0,2.255,1.148,1.915,1.915,0,0,0,2.091-2.009,3.087,3.087,0,0,0-.656-1.8A8.407,8.407,0,0,0,72,20.434Zm38.54.041a8.406,8.406,0,0,0-7.708,5.125,7.063,7.063,0,0,0-7.093-5.125c-4.428,0-6.847,3.362-7.011,4.838v-2.05a2.686,2.686,0,1,0-5.371,0V39.54a2.686,2.686,0,0,0,5.371,0V29.659c.164-1.148,1.394-4.592,5.084-4.592,2.419,0,4.346,1.517,4.346,5.207V39.54a2.686,2.686,0,0,0,5.371,0V29.659c.123-1.148,1.394-4.592,5.084-4.592,2.419,0,4.346,1.517,4.346,5.207V39.54a2.686,2.686,0,0,0,5.371,0V30.274C118.326,23.181,114.677,20.475,110.536,20.475Zm21.853-.041a10.784,10.784,0,0,0-10.783,10.947c0,7.462,5.781,10.824,11.234,10.824a10.523,10.523,0,0,0,6.15-1.763,2.941,2.941,0,0,0,1.312-2.255,1.764,1.764,0,0,0-1.845-1.845,5.022,5.022,0,0,0-2.009.656,7.222,7.222,0,0,1-3.4.861c-2.993,0-5.371-1.6-5.863-4.592l12.177.082c2.173,0,3.362-.738,3.362-2.87C142.721,24.124,137.063,20.434,132.389,20.434Zm0,4.674a4.824,4.824,0,0,1,5.043,4.469h-10.25A4.946,4.946,0,0,1,132.389,25.108Zm25.379-4.633c-3.69,0-6.232,3.362-6.4,4.838v-2.05a2.686,2.686,0,1,0-5.371,0V39.54a2.686,2.686,0,0,0,5.371,0V29.659a5.51,5.51,0,0,1,5.494-4.182c2.3,0,3.444-1.025,3.444-2.542A2.366,2.366,0,0,0,157.768,20.475Z"
+            transform="translate(-1.435 29.684)"
+            fill="#fff"
+          ></path>
+        </svg>
+      </a>
+    </div>
+    <iframe
+      class="desktop"
+      src="https://my.spline.design/designersguidebookpcimage-52a4b0614a266b53a674f06b06d59b0b/"
+    ></iframe>
+    <iframe
+      class="mobile"
+      src="https://my.spline.design/designersguidebookpcimagecopy-1384bb4c394224dbdd8639b009654949/"
+    ></iframe>
 
     <script>
-        function updateIframeVisibility() {
-            const isLandscape = window.innerWidth > window.innerHeight;
+      function updateIframeVisibility() {
+        const isLandscape = window.innerWidth > window.innerHeight;
 
-            // Hide both iframes initially
-            document.querySelector('.desktop').style.display = 'none';
-            document.querySelector('.mobile').style.display = 'none';
+        // Hide both iframes initially
+        document.querySelector(".desktop").style.display = "none";
+        document.querySelector(".mobile").style.display = "none";
 
-            // Display the appropriate iframe based on orientation
-            if (isLandscape) {
-                document.querySelector('.desktop').style.display = 'block';
-            } else {
-                document.querySelector('.mobile').style.display = 'block';
-            }
+        // Display the appropriate iframe based on orientation
+        if (isLandscape) {
+          document.querySelector(".desktop").style.display = "block";
+        } else {
+          document.querySelector(".mobile").style.display = "block";
         }
+      }
 
-        // Call the function on page load and on window resize
-        window.addEventListener('load', updateIframeVisibility);
-        window.addEventListener('resize', updateIframeVisibility);
+      // Call the function on page load and on window resize
+      window.addEventListener("load", updateIframeVisibility);
+      window.addEventListener("resize", updateIframeVisibility);
     </script>
-</body>
+  </body>
 </html>
