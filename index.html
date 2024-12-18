@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designers Guide Book</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none; /* Optional: removes the iframe border */
+            display: none; /* Initially hide both iframes */
+        }
+
+        .desktop {
+            display: none;
+           
+        }
+
+        .mobile {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe class="desktop" src="https://my.spline.design/designersguidebookpcimage-52a4b0614a266b53a674f06b06d59b0b/"></iframe>
+    <iframe class="mobile" src="https://my.spline.design/designersguidebookpcimagecopy-1384bb4c394224dbdd8639b009654949/"></iframe>
+
+    <script>
+        function updateIframeVisibility() {
+            const isLandscape = window.innerWidth > window.innerHeight;
+
+            // Hide both iframes initially
+            document.querySelector('.desktop').style.display = 'none';
+            document.querySelector('.mobile').style.display = 'none';
+
+            // Display the appropriate iframe based on orientation
+            if (isLandscape) {
+                document.querySelector('.desktop').style.display = 'block';
+            } else {
+                document.querySelector('.mobile').style.display = 'block';
+            }
+        }
+
+        // Call the function on page load and on window resize
+        window.addEventListener('load', updateIframeVisibility);
+        window.addEventListener('resize', updateIframeVisibility);
+    </script>
+</body>
+</html>
